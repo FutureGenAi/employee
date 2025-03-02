@@ -1,6 +1,5 @@
 package com.dev.employee.service.impl;
 
-import com.dev.employee.dto.EmployeeDTO;
 import com.dev.employee.entity.Employee;
 import com.dev.employee.repository.EmployeeRepository;
 import com.dev.employee.service.EmployeeService;
@@ -30,7 +29,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public Employee updateEmployee(Long id, EmployeeDTO employeeDetails) {
+    public Employee updateEmployee(Long id, Employee employeeDetails) {
         Employee employee = getEmployeeById(id);
         employee.setName(employeeDetails.getName());
         employee.setDepartment(employeeDetails.getDepartment());

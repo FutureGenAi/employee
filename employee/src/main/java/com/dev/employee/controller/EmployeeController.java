@@ -1,6 +1,5 @@
 package com.dev.employee.controller;
 
-import com.dev.employee.dto.EmployeeDTO;
 import com.dev.employee.entity.Employee;
 import com.dev.employee.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +18,7 @@ public class EmployeeController {
     private EmployeeService service;
 
     @PostMapping
-    public Employee createEmployee(@RequestBody EmployeeDTO employee) {
+    public Employee createEmployee(@RequestBody Employee employee) {
         logger.info("Creating employee: {}", employee.getName());
         return service.createEmployee(employee);
     }
