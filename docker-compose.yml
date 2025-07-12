@@ -10,7 +10,7 @@ services:
       - "3306:3306"
 
   app:
-    build: .
+    build: employee
     depends_on:
       - mysql
     ports:
